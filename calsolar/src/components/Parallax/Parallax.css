@@ -1,0 +1,41 @@
+.col-header{
+    margin-top: 10rem;
+    color: white;
+}
+.title-color{
+    color: #44cfcc;
+}
+.quote-btn{
+    font-size: 22px;
+    margin-top: 1rem;
+    margin-left: -.7rem;
+    width: 200px;
+    height: 50px;
+    transition: .5s;
+}
+.quote-btn:hover{
+   transform: scale(1.1)
+}
+.info-contanier{
+    height: auto;
+}
+p{
+    font-size: 20px
+}
+.about-content{
+    margin-top: 1.5rem;
+}
+.blue-text{
+    color: #4fa4da;
+}
+strong{
+    color: #2b4496
+}
+.request-btn-on-content{
+    font-size: 21px;
+    margin-top: 2rem;
+    transition: .5s;
+}
+.request-btn-on-content:hover{
+   background-color: #44cfcc;
+}
