@@ -3,6 +3,6 @@ import axios from "axios";
 export default {
    
     send: function(data) {
-      return axios.post("/api/send", data);
+      return axios.post("https://finfinder.herokuapp.com/api/send", data);
     }
   };
