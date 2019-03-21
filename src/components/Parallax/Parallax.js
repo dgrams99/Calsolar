@@ -70,11 +70,7 @@ class ParallaxBackground extends Component {
         showCardsPPA = 'show'
      }
 
-     if(this.state.contactPage === true){
-         return(
-            <ContactPage></ContactPage>
-         )
-     }
+    
   return (
     <div>
     <Parallax
@@ -89,7 +85,7 @@ class ParallaxBackground extends Component {
         <div className='col-8 col-header'>
             <h2 className='title-color'>We are CalSolar</h2>
             <h1>YOUR LOCAL EXPERT'S IN SOLAR SOLUTIONS </h1>
-            <button className='btn  quote-btn btn-shift-when-clicked' onClick={() => this.setState({contactPage: true})}>Request Quote</button>                   
+            <button className='btn  quote-btn btn-shift-when-clicked'>Request Quote</button>                   
         </div>
         </div>
      </div>
@@ -107,7 +103,7 @@ class ParallaxBackground extends Component {
             on investment of your custom solar solution. </strong></p>
             </div>
            
-            <button className='btn  request-btn-on-content btn-shift-when-clicked' onClick={() => this.setState({contactPage: true})}>Request A Quote</button>
+            <button className='btn  request-btn-on-content btn-shift-when-clicked'>Request A Quote</button>
             
      </div>
     </div>
@@ -136,9 +132,9 @@ class ParallaxBackground extends Component {
             <div className='card card-com card-shape'>
             <img className='card-img-top ' src={require('../../Picutres/commercial.jpg')} alt="" />
             <div className='card-body'>
-              <h1 className='card-title'>Residential</h1>
+              <h1 className='card-title'>Commercial</h1>
               <p className='card-text'>Lower your energy bill while decreasing your carbon footprint by going solar.</p>
-              <Link to="/res/learnmore" className={window.location.pathname === "/res/learnmore"}>
+              <Link to="/com/learnmore" className={window.location.pathname === "/com/learnmore"}>
                  <button className='btn learn-more-btn'>Learn-More</button>
              </Link>
             </div>
@@ -148,9 +144,9 @@ class ParallaxBackground extends Component {
             <div className='card card-utility card-shape'>
             <img className='card-img-top ' src={require('../../Picutres/solar-farm.jpg')} alt="" />
             <div className='card-body'>
-              <h1 className='card-title'>Residential</h1>
+              <h1 className='card-title'>Utility</h1>
               <p className='card-text'>Lower your energy bill while decreasing your carbon footprint by going solar.</p>
-              <Link to="/res/learnmore" className={window.location.pathname === "/res/learnmore"}>
+              <Link to="/utility/learnmore" className={window.location.pathname === "/utility/learnmore"}>
                  <button className='btn learn-more-btn'>Learn-More</button>
              </Link>
             </div>
@@ -174,7 +170,7 @@ class ParallaxBackground extends Component {
                  CalSolar, our experts help you choose the option that works 
                  best for you and your specific situation.</p>
            <h2 className='separate'>Start Receiving Your Annual Return Today</h2>
-           <p>Call CalSolar to discuss these options in greater detail at <div className='blue-text big-text'>209-253-0923.</div> OR <br /> <button onClick={() => this.setState({contactPage: true})} className='btn  contact-btn btn-shift-when-clicked'>Contact Us</button></p>
+           <p>Call CalSolar to discuss these options in greater detail at <div className='blue-text big-text'>209-253-0923.</div> OR <br /> <button className='btn  contact-btn btn-shift-when-clicked'>Contact Us</button></p>
         </div>
         <div className='col-lg-6 col-sm-12 finance-col-2'>
         <button className='btn  d-flex justify-content-right top-shift btn-shift-when-clicked'  onClick={() => this.closeCards()}><i class="material-icons clear-icon">clear</i> </button>

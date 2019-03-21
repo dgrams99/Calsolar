@@ -58,3 +58,9 @@
     color: white;
     margin-top: .5rem;
 }
+.btn{
+margin-top: -.5rem;
+}
+.btn:active{
+margin-top: 0rem;
+}

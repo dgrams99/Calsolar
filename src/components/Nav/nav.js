@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './Nav.css'
 import '../Parallax/Media.css'
+import { Link } from "react-router-dom"
+import { Linkscroll , Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 class Nav extends Component {
     state = {
         isMobile: null,
       }
-    
+      
       componentDidMount() {
         if(window.innerWidth < 1000){
             this.setState({
@@ -18,6 +21,34 @@ class Nav extends Component {
             })
             
         }
+        Events.scrollEvent.register('begin', function(to, element) {
+          console.log("begin", arguments);
+        });
+     
+        Events.scrollEvent.register('end', function(to, element) {
+          console.log("end", arguments);
+        });
+     
+        scrollSpy.update();
+    }
+    componentWillMount() {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end')
+    }
+    scrollToTop(){
+      scroll.scrollToTop();
+    }
+    scrollToBottom(){
+      scroll.scrollToBottom();
+    }
+    scrollTo(){
+      scroll.scrollTo(100);
+    }
+    scrollMore(){
+      scroll.scrollMore(100);
+    }
+    handleSetActive(to){
+     console.log(to);
     }
     render() {     
         if(this.state.isMobile === true){
@@ -27,13 +58,13 @@ class Nav extends Component {
                 <div className='container '>
                  <div className='row '>
                     <div className='col-4'>
-                    <img className='home-icon' src={require('../../Picutres/baseline-home-24px.svg')} alt=""/>
+                   <button className="btn btn ">Home</button>
                     </div>
                     <div className='col-4'>
-                    <img className='contact-icon' src={require('../../Picutres/baseline-contact_support-24px.svg')} alt=""/>
+                    <button className="btn">Contact</button>
                     </div>
                     <div className='col-4'>
-                    <img className='money-icon' src={require('../../Picutres/baseline-attach_money-24px.svg')} alt=""/>
+                    <button className="btn">Finance</button>
                     </div>
                  </div>
                
@@ -46,7 +77,11 @@ class Nav extends Component {
   return (
     <nav className={"navbar fixed-top nav-color "}>
       <div className='navbar-brand Logo'>
+
+      <Link to="/" className={window.location.pathname === "/"}>
         <img className='Logo' src={require('../../Picutres/Logo-calsolar.png')}  alt="" />
+        </Link>
+   
       </div>
       <div className='d-flex justify-content-center'>
          
