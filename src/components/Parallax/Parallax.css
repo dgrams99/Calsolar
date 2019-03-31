@@ -205,18 +205,22 @@ p{
 .background-color{
     background-color: #568cd8;
 }
-.card-shape{
+/* .card-shape{
     min-height: 541.47px;
     margin-bottom: 1rem;
     margin-top: 1rem;
-}
+} */
 .card-res{
-    height: 573.47px;
+    margin-top: 2rem;
+    min-height: 645px;
     background-color: #44cfcc;
 }
 .card-com{
     background-color: #666666;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .card-utility{
+    margin-top: 2rem;
     background-color: #2b4496;
 }

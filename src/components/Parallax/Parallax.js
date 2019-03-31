@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Parallax} from 'react-parallax';
-import  ContactPage from '../contact/contact';
 import { Link } from "react-router-dom"
 import './Parallax.css'
 
@@ -108,7 +107,7 @@ class ParallaxBackground extends Component {
      </div>
     </div>
     <Parallax
-      blur={{ min: -15, max: 15 }}
+      blur={4}
       bgImage={require('../../Picutres/Parralax-img-2.jpg')}
       bgImageAlt=""
       strength={300}
@@ -116,7 +115,7 @@ class ParallaxBackground extends Component {
      <div className='contanier'>
         <div className='row d-flex justify-content-center'>
 
-        <div className='col-sm-12 col-md-4 col-lg-3'>
+        <div className='col-sm-11 col-md-8 col-lg-4'>
             <div className='card card-res card-shape'>
             <img className='card-img-top ' src={require('../../Picutres/residential.jpg')} alt="" />
             <div className='card-body'>
@@ -128,11 +127,12 @@ class ParallaxBackground extends Component {
             </div>
             </div> 
         </div>
-        <div className='col-sm-12 col-md-4 col-lg-3'>
+        <div className='col-sm-11 col-md-8 col-lg-4'>
             <div className='card card-com card-shape'>
             <img className='card-img-top ' src={require('../../Picutres/commercial.jpg')} alt="" />
             <div className='card-body'>
-              <h1 className='card-title'>Commercial</h1>
+              <h1 className='card-title'>Commercial/</h1>
+              <h1 className='card-title'>Agriculture</h1>
               <p className='card-text'>Lower your energy bill while decreasing your carbon footprint by going solar.</p>
               <Link to="/com/learnmore" className={window.location.pathname === "/com/learnmore"}>
                  <button className='btn learn-more-btn'>Learn-More</button>
@@ -140,7 +140,7 @@ class ParallaxBackground extends Component {
             </div>
             </div> 
         </div>
-         <div className='col-sm-12 col-md-4 col-lg-3'>
+         <div className='col-sm-11 col-md-8 col-lg-4'>
             <div className='card card-utility card-shape'>
             <img className='card-img-top ' src={require('../../Picutres/solar-farm.jpg')} alt="" />
             <div className='card-body'>

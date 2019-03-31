@@ -85,7 +85,9 @@ class Res extends Component {
     </div>
       
 
-			
+			<div className='footer white-text'>
+      
+      </div>
                 </div>
 		);
 	}
